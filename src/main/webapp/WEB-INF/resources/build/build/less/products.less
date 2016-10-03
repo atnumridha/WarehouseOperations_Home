@@ -1,0 +1,45 @@
+/*
+ * Component: Products List
+ * ------------------------
+ */
+.appts-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  > .item {
+    .border-radius(@box-border-radius);
+    .box-shadow(@box-boxshadow);
+    .clearfix();
+    padding: 10px 0;
+    background: #fff;
+  }
+  .appt-img {
+    float: left;
+    img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  .appt-info {
+    margin-left: 60px;
+  }
+  .appt-title {
+    font-weight: 600;
+  }
+  .appt-description {
+    display: block;
+    color: #999;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+.appt-list-in-box > .item {
+  .box-shadow(none);
+  .border-radius(0);
+  border-bottom: 1px solid @box-border-color;
+  &:last-of-type {
+    border-bottom-width: 0;
+  }
+}
